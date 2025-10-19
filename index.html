@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="style.css"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Project 1</title>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <main class="container">
-        <h1>Feedback Form</h1>
-        <form id="feedback-form" novalidate>
-            <div class ="field">
-                <input type="text" id="name" data-tooltip="Please enter your full" placeholder="Enter your name">
-                <input type="email" id="email" data-tooltip="Enter a valid email address" placeholder="Enter your email">
-
+<main class="container">
+    <h1>Feedback Form</h1>
+    <form id="feedback-form" novalidate>
+        <div class="field">
+            <input type="text" id="name" data-tooltip="Please enter your full name" placeholder="Enter your name"/>
+        </div>
+        <div class="field">
+            <input type="email" id="email" data-tooltip="Enter a valid email address" placeholder="Enter your email"/>
+        </div>
         <div class="field">
             <label for="comments">Comments</label>
             <textarea name="comments" id="comments" rows="5" data-tooltip="Share your comments"></textarea>
-        <div class="muted" id="char-row"> 
-                <span id="char-count">0</span>characters
+            <div class="muted" id="char-row">
+                <span id="char-count"></span>
+            </div>
         </div>
+        <div class="form-group">
+            <label for="type">Type of Feedback:</label>
+            <select 
+                id="type" 
+                name="type" 
+                data-tooltip="Select the type of feedback">
+                <option value="">--Select Type--</option>
+                <option value="compliment">Compliment</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="complaint">Complaint</option>
+            </select>
         </div>
-    <div class="form-group">
-        <label for="type">Type of Feedback:</label>
-    <select 
-      id="type" 
-      name="type" 
-      data-tooltip="Select the type of your feedback.">
-        <option value="">--Select Type--</option>
-        <option value="compliment">Compliment</option>
-        <option value="suggestion">Suggestion</option>
-        <option value="complaint">Complaint</option>
-    </select>
-    </div>
-
         <button type="submit" id="submit-btn">Submit</button>
-        </div>
-        </div>
     </form>
     <section aria-live="polite" aria-atomic="false">
         <h2>Submitted Feedback</h2>
         <div id="feedback-display" class="stack"></div>
-        <script src="cp_1.js"></script>
+    </section>
+</main>
+<script src="cp_1.js"></script>
 </body>
 </html>
