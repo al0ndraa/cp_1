@@ -20,8 +20,8 @@ function showTooltip(target, event) {
   document.body.appendChild(tooltip);
 
   tooltip.style.position = 'absolute';
-  tooltip.style.left = `${event.clientX + 10}px`;
-  tooltip.style.top = `${event.clientY + 10}px`;
+  tooltip.style.left = `${event.clientX + 12}px`;
+  tooltip.style.top = `${event.clientY + 12}px`;
   target._tooltip = tooltip;
 }
 
